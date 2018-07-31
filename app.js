@@ -4,7 +4,10 @@ var gameEndFlg = 0;
 var timer = null;
 var startTime = 0;
 var timeLeft = 0;
-var timeToCountDown = 2 * 1000; // ミリ秒
+var timeToCountDown = 10 * 1000; // ミリ秒
+var cntNgTypes = 0;
+var cntOkTypes = 0;
+var cntOkWords = 0; 
 var words = {
 	'東横インにチェックイン':'touyokoinnityekkuinn',
 	'旭川市から来た札幌太郎':'asahikawashikarakitasapporotaro',
@@ -58,8 +61,7 @@ function selectWord(obj) {
 
 }
 
-function init() {
-	gameEndFlg = 0;
+function init_word() {
 	document.querySelector('.containerRoman').innerHTML = '';
 	var [jpWord, romanWord] = selectWord(words);	
 	types = romanWord.split('').map(function(str) {
@@ -67,19 +69,29 @@ function init() {
 		type.className = 'type';
 		type.textContent = str;
 		document.querySelector('.containerRoman').appendChild(type);
+		document.querySelector('.containerJp').textContent = jpWord;
 		return type;
 
 	});
+}
+
+function init() {
+	cntNgTypes = 0;
+	cntOkTypes = 0;
+	cntOkWords = 0; 
+	gameEndFlg = 0;
+	init_word();
 	timerEnd();
 	document.querySelector('.timer').textContent = (timeToCountDown/1000).toFixed(1);
 	document.querySelector('.message').textContent = '入力を開始したらスタートです！';
-	document.querySelector('.containerJp').textContent = jpWord;
+	document.querySelector('.result').textContent = '';
 }
 init();
 
 function finishGame() {
 	document.querySelector('.timer').textContent = 0.0; //-0.0と表示されないようにする
 	document.querySelector('.message').textContent = "終了です！もう一度始めるにはESCキーを押してください。";
+	document.querySelector('.result').textContent = `入力文字数は ${cntOkTypes}打, 入力単語数は ${cntOkWords}個, ミスタイプは ${cntNgTypes} です。`;
 	timerEnd();
 	gameEndFlg = 1;
 };
@@ -148,14 +160,16 @@ document.addEventListener('keydown', function(event) {
 		}
 		var next = types[0];
 		if (next.textContent === key) {
+			cntOkTypes += 1;
 			next.classList.add('ok');
 			types.shift();
 			if (types.length === 0) {
-				timerEnd();
-				init();
+				cntOkWords += 1;
+				init_word();
 			}
 		} else {
-				next.classList.add('ng');
+			next.classList.add('ng');
+			cntNgTypes += 1;
 		}
 	}
 });

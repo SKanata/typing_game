@@ -33,6 +33,14 @@ body {
 	color: #fff;
 }
 
+.result {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	top: 80%;	
+	color: #58FAF4;
+}
+
 .type {
     color: #fff;
     font-size: 40px;
