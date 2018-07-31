@@ -1,8 +1,10 @@
 var romanWord = localStorage.romanWord || 'sushiarashi';
-
 var types = [];
+var gameEndFlg = 0;
 var timer = null;
 var startTime = 0;
+var timeLeft = 0;
+var timeToCountDown = 2 * 1000; // ミリ秒
 var words = {
 	'東横インにチェックイン':'touyokoinnityekkuinn',
 	'旭川市から来た札幌太郎':'asahikawashikarakitasapporotaro',
@@ -10,6 +12,7 @@ var words = {
 	'今日のところは勘弁':'kyounotokorohakanbenn',
 	'ラズベリーπ':'razuberi-pai'
 };
+
 /*
 function loadCSV(targetFile) {
  
@@ -56,6 +59,7 @@ function selectWord(obj) {
 }
 
 function init() {
+	gameEndFlg = 0;
 	document.querySelector('.containerRoman').innerHTML = '';
 	var [jpWord, romanWord] = selectWord(words);	
 	types = romanWord.split('').map(function(str) {
@@ -67,17 +71,34 @@ function init() {
 
 	});
 	timerEnd();
-	document.querySelector('.timer').textContent = '0.000';
+	document.querySelector('.timer').textContent = (timeToCountDown/1000).toFixed(1);
+	document.querySelector('.message').textContent = '入力を開始したらスタートです！';
 	document.querySelector('.containerJp').textContent = jpWord;
 }
 init();
 
+function finishGame() {
+	document.querySelector('.timer').textContent = 0.0; //-0.0と表示されないようにする
+	document.querySelector('.message').textContent = "終了です！もう一度始めるにはESCキーを押してください。";
+	timerEnd();
+	gameEndFlg = 1;
+};
+
 function timerStart() {
 	startTime = new Date().getTime();
 	timer = setInterval( function() {
-		var time = (new Date().getTime() - startTime) / 1000;
-		document.querySelector('.timer').textContent = time.toFixed(3);
-	}, 10);
+	document.querySelector('.timer').textContent = 0.0;
+		var elapsedTime = Date.now() - startTime; //経過時間
+		//残り時間 = 制限時間 - 経過時間
+		timeLeft = (timeToCountDown - elapsedTime)/1000 ;//(new Date().getTime() - startTime) / 1000;
+		document.querySelector('.timer').textContent = timeLeft.toFixed(1);
+		if (timeLeft <= 0) {
+			finishGame();
+		}
+	}, 100);
+	
+
+	document.querySelector('.message').textContent = '途中でやめるにはESCキーを押してください'
 }
 
 function timerEnd() {
@@ -88,9 +109,13 @@ function timerEnd() {
 document.addEventListener('keydown', function(event) {
 	var keyCode = event.keyCode;
 
-	if (keyCode === 13) {
-		init();
-		return
+	if (gameEndFlg === 1) {
+		if (keyCode === 27) {
+			init();
+			return
+		} else {
+			return
+		}
 	}
 
 	var key = '';
@@ -101,6 +126,12 @@ document.addEventListener('keydown', function(event) {
 	if (keyCode === 189) {
 		key = '-'
 	}
+
+	if (keyCode === 27) { //ESC押したら初期化
+		init();
+		return
+	}
+
 
 	if (keyCode >= 65 && keyCode <= 90) {
 		key = String.fromCharCode(keyCode);

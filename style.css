@@ -13,8 +13,8 @@ body {
 	position: absolute;
 	width: 100%;
 	text-align: center;
-	top: 30%;
-	font-size: 40px;
+	top: 40%;
+	font-size: 25px;
 	color: #fff;
 }
 
@@ -25,13 +25,23 @@ body {
 	top: 50%;
 }
 
+.message {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	top: 70%;	
+	color: #fff;
+}
+
 .type {
     color: #fff;
-    font-size: 64px;
+    font-size: 40px;
     /* 追記 ココカラ */
     /* for firefox */
     display: inline-block;
-    min-width: 20px;
+    min-width: 40px;
+    margin: -3px;
+    padding: 0px;
     /* 追記 ココマデ */
 }
 
@@ -72,6 +82,6 @@ body {
 	text-align: center;
 	position: absolute;
 	width: 100%;
-	top: 10%;
+	top: 30%;
 
 }
