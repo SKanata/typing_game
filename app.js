@@ -102,7 +102,10 @@ document.addEventListener('keydown', function(event) {
 	if (keyCode === 189) {
 		key = '-'
 	}
-
+	if (keyCode === 188) { // カンマを押したら文字列のみ初期化
+	    init_word();
+	}
+    
 	if (keyCode === 27) { //ESC押したら初期化
 		init();
 		return
