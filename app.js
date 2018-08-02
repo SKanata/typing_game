@@ -4,53 +4,17 @@ var gameEndFlg = 0;
 var timer = null;
 var startTime = 0;
 var timeLeft = 0;
-var timeToCountDown = 10 * 1000; // ミリ秒
+var timeToCountDown = 120 * 1000; // ミリ秒
 var cntNgTypes = 0;
 var cntOkTypes = 0;
 var cntOkWords = 0; 
 var words = {
 	'東横インにチェックイン':'touyokoinnityekkuinn',
-	'旭川市から来た札幌太郎':'asahikawashikarakitasapporotaro',
+	'横浜県はどっちですか':'yokohamakenhadottidesuka',
 	'明日は晴れのち雪':'ashitahaharenochiyuki',
 	'今日のところは勘弁':'kyounotokorohakanbenn',
-	'ラズベリーπ':'razuberi-pai'
+	'ラズベリーぱいをたべる':'razuberi-paiwotaberu'
 };
-
-/*
-function loadCSV(targetFile) {
- 
-    // 読み込んだデータを1行ずつ格納する配列
-    var allData = [];
- 
-    // XMLHttpRequestの用意
-    var request = new XMLHttpRequest();
-    request.open("get", targetFile, false);
-    request.send(null);
- 
-    // 読み込んだCSVデータ
-    var csvData = request.responseText;
- 
-    // CSVの全行を取得
-    var lines = csvData.split("\n");
- 
-    for (var i = 0; i < lines.length; i++) {
-        // 1行ごとの処理
- 
-        var wordSet = lines[i].split(",");
- 
-        var wordData = {
-            wordSet[0] : wordSet[1]
-        };
- 
-        allData.push(wordData);
-    }
- 	
-    console.log(allData);
-    return allData;
-}
- 
-words = loadCSV("sample.csv");
-*/
 
 console.log(words)
 function selectWord(obj) {
@@ -173,12 +137,15 @@ document.addEventListener('keydown', function(event) {
 		}
 	}
 });
-
+/*
 document.querySelector('.containerRoman').addEventListener('click', function(event){
-	var text = prompt('問題文を入力してください');
-	if (text) {
-		romanWord = text;
-		localStorage.romanWord = text;
+	var textJp = prompt('日本語の問題文を入力してください');
+	var textRoman = prompt('ローマ字の問題文を入力してください');
+	if (textRoman && textJp) {
+		words[textJp] = textRoman
+		localStorage.originalWords = words;
+		localStorage.originalWords = null;
 		init();
 	}
 });
+*/

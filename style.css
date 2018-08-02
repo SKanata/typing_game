@@ -5,16 +5,16 @@
 }
 
 body {
-	background-color: #000;
-	font-family: 'Raleway', sans-serif;
+	background-image: url(images/sushi_back.jpg);
+/*	font-family: 'Raleway', sans-serif; */
 }
 
 .containerJp {
-	position: absolute;
+	position: relative;
 	width: 100%;
 	text-align: center;
-	top: 40%;
-	font-size: 25px;
+	font-size: 20px;
+	text-align: center;
 	color: #fff;
 }
 
@@ -22,14 +22,14 @@ body {
 	position: absolute;
 	width: 100%;
 	text-align: center;
-	top: 50%;
+	font-size: 20px
 }
-
+	
 .message {
 	position: absolute;
 	width: 100%;
 	text-align: center;
-	top: 70%;	
+	bottom: 20%;	
 	color: #fff;
 }
 
@@ -37,19 +37,20 @@ body {
 	position: absolute;
 	width: 100%;
 	text-align: center;
-	top: 80%;	
+	bottom:10%;	
 	color: #58FAF4;
 }
 
 .type {
     color: #fff;
-    font-size: 40px;
+    font-size: 35px;
     /* 追記 ココカラ */
     /* for firefox */
     display: inline-block;
-    min-width: 40px;
-    margin: -3px;
+    min-width: 0px;
+    margin: 1px;
     padding: 0px;
+    text-align: center;
     /* 追記 ココマデ */
 }
 
@@ -83,7 +84,6 @@ body {
 }
 /* 修正 ココマデ */
 
-
 .timer {
 	color: #fff;
 	font-size: 30px;
@@ -92,4 +92,20 @@ body {
 	width: 100%;
 	top: 30%;
 
+}
+
+.target {
+	position: absolute;
+	width: 60%;
+	height: 100px;
+	text-align: center;
+	top: 40%;
+	left: 0;
+  	right: 0;
+	color: #fff;
+	background-color: #000;
+	margin:0 auto;
+	padding: 2px;
+	opacity: 0.7;
+	border-radius: 20px
 }
