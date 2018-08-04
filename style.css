@@ -106,9 +106,9 @@ body {
 	left: 0;
   	right: 0;
 	color: #fff;
-	background-color: #000;
+	background-color: rgb(0,0,0,0.7);
 	margin:0 auto;
 	padding: 2px;
-	opacity: 0.7;
+
 	border-radius: 20px
 }
