@@ -4,7 +4,7 @@ var gameEndFlg = 0;
 var timer = null;
 var startTime = 0;
 var timeLeft = 0;
-var timeToCountDown = 120 * 1000; // ミリ秒
+var timeToCountDown = 99999999 * 1000; // ミリ秒
 var cntNgTypes = 0;
 var cntOkTypes = 0;
 var cntOkWords = 0; 
@@ -13,7 +13,17 @@ var words = {
 	'横浜県はどっちですか':'yokohamakenhadottidesuka',
 	'明日は晴れのち雪':'ashitahaharenochiyuki',
 	'今日のところは勘弁':'kyounotokorohakanbenn',
-	'ラズベリーぱいをたべる':'razuberi-paiwotaberu'
+    'ラズベリーぱいをたべる':'razuberi-paiwotaberu',
+    '本日より放送開始です':'honjitsuyorihousoukaishidesu',
+    '続編発売が決定しました':'zokuhenhatsubaigaketteishimashita',
+    'あの人はおしゃれですね':'anohitowaosharedesune',
+    '会うは別れの始め':'auwawakarenohajime',
+    '危ない橋を渡る':'abunaihashiwowataru',
+    'これから歯医者に行くので時間がありません':'korekarahaisyaniikunodezikangaarimasen',
+    'こまめな水分補給を':'komamenasuibunhokyuuwo',
+    'ラーメンを摂取する':'ra-menwosessyusuru',
+    'タイピングだけは早い':'taipingudakehahayai',
+    '青春は汗とともに':'seisyunhaasetotomoni'
 };
 
 console.log(words)
