@@ -28,7 +28,7 @@ var words = {
     '現在満席です':'genzaimansekidesu',
     '今シーズンで引退':'konsi-zundeintai',
     '夏休みに海外旅行':'natsuyasuminikaigairyokou',
-    '恵比寿駅でおしゃれランチ':'ebisuekideosyareranchi',
+    '恵比寿駅でおしゃれランチ':'ebisuqekideosyareranchi',
     '心の声に従う':'kokoronokoenishitagau',
     'みんな同じ顔に見える':'minnaonajikaonimieru',
     'じじじじじいいいいいいいいいいいいいいいいいいいじいいいい':'jijijijijiiiiiiiiiiiiiiiiiiiijiiiii',
@@ -56,7 +56,7 @@ var words = {
     'ランチは十秒':'ranchihazyuubyou',
     '今日は終電で帰れる':'kyouhashuudendekaereru',
     '戦いはこれからだ':'tatakaihakorekarada',
-    'オラオラオラオラ':'oraoraoraoratatakaihakorekarada'
+    'オラオラオラオラ':'oraoraoraoratatakaihakorekarada',
     '効率化すすめて気づく俺が無駄':'kouritsukasusumetekidukuoregamuda',
     '今どきはシャープと言わずハッシュタグ':'imadokihasha-putoiwazuhasshutagu',
     '定額使い放題':'teigakutsukaihoudai',
@@ -74,10 +74,10 @@ var words = {
     'かえるぴょこぴょこみぴょこぴょこあわせてぴょこぴょこむぴょこぴょこ':'kaerupyokopyokomipyokopyokoawasetepyokopyokomupyokopyoko',
     '東京特許許可局局長今日急遽許可却下':'toukyoutokkyokyokakyokukyokuchoukyoukyuukyokyokakyakka',
     '坊主が屏風に上手に坊主の絵を描いた':'bouzugabyoubunijouzunibouzunoewokaita',
-    '赤パジャマ黄パジャマ青パジャマ','akapajamakipajamaaopajama',
-    'となりの客はよく柿食う客だ','tonarinokyakuhayokukakikuukyakuda',
-    '空虚な九州空港の究極高級航空機','kuukyonakyuushuukuukounokyuukyokukoukyuukoukuuki',
-    '伝染病予防病院予防病室','densenbyouyoboubyouinyoboubyoushitsu',
+    '赤パジャマ黄パジャマ青パジャマ':'akapajamakipajamaaopajama',
+    'となりの客はよく柿食う客だ':'tonarinokyakuhayokukakikuukyakuda',
+    '空虚な九州空港の究極高級航空機':'kuukyonakyuushuukuukounokyuukyokukoukyuukoukuuki',
+    '伝染病予防病院予防病室':'densenbyouyoboubyouinyoboubyoushitsu',
     '魔術師手術中集中術著述':'majutsushishujutsuchuushuuchuujutsuchojutsu',
     '骨粗鬆症訴訟勝訴':'kotsusoshoushousoshoushouso'
 };
