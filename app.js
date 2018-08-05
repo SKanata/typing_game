@@ -55,7 +55,31 @@ var words = {
     '利根川ぁぁぁっ':'tonegawaxaxaxaxxtsu',
     'ランチは十秒':'ranchihazyuubyou',
     '今日は終電で帰れる':'kyouhashuudendekaereru',
-    '戦いはこれからだ':'tatakaihakorekarada'
+    '戦いはこれからだ':'tatakaihakorekarada',
+    'オラオラオラオラ':'oraoraoraoratatakaihakorekarada'
+    '効率化すすめて気づく俺が無駄':'kouritsukasusumetekidukuoregamuda',
+    '今どきはシャープと言わずハッシュタグ':'imadokihasha-putoiwazuhasshutagu',
+    '定額使い放題':'teigakutsukaihoudai',
+    'お金以上に大切なもの':'okaneijounitaisetsunamono',
+    '社外でも社員証を首にかけている':'shagaidemoshainshouwokubinikaketei',
+    '首のところが少し変だね':'kubinotokorogasukoshihendane',
+    '残念ながらそれはできません':'zannennagarasorehadekimasen',
+    'そんなこと言わないでください':'sonnakotoiwanaidekudasai',
+    '少なくとも最後に確認した時はいませんでした':'sukunakutomosaigonikakuninshitatokihaimasendeshita',
+    '用意しておいたんですが家に忘れてきました':'youishiteoitandesugaieniwasuretekimashita',
+    '知っていたらお教えしますよ':'shitteitaraooshieshimasuyo',
+    '生麦生米生卵':'namamuginamagomenamatamago',
+    'きゃりーぱみゅぱみゅ':'kyari-pamyupamyu',
+    '除雪車除雪作業中':'josetsushajosetsusagyouchuu',
+    'かえるぴょこぴょこみぴょこぴょこあわせてぴょこぴょこむぴょこぴょこ':'kaerupyokopyokomipyokopyokoawasetepyokopyokomupyokopyoko',
+    '東京特許許可局局長今日急遽許可却下':'toukyoutokkyokyokakyokukyokuchoukyoukyuukyokyokakyakka',
+    '坊主が屏風に上手に坊主の絵を描いた':'bouzugabyoubunijouzunibouzunoewokaita',
+    '赤パジャマ黄パジャマ青パジャマ','akapajamakipajamaaopajama',
+    'となりの客はよく柿食う客だ','tonarinokyakuhayokukakikuukyakuda',
+    '空虚な九州空港の究極高級航空機','kuukyonakyuushuukuukounokyuukyokukoukyuukoukuuki',
+    '伝染病予防病院予防病室','densenbyouyoboubyouinyoboubyoushitsu',
+    '魔術師手術中集中術著述':'majutsushishujutsuchuushuuchuujutsuchojutsu',
+    '骨粗鬆症訴訟勝訴':'kotsusoshoushousoshoushouso'
 };
 
 console.log(words)
